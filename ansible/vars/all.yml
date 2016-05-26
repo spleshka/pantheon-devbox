@@ -21,7 +21,7 @@ nginx:
 php:
     install: '1'
     ppa: php5-5.6
-    packages: [php5-cli, php5-intl, php5-mcrypt, php5-imagick, php5-curl, php5-gd, php5-xdebug, php5-mysql]
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-imagick, php5-curl, php5-gd php5-mysql]
 
 mariadb:
     install: '1'
@@ -30,19 +30,19 @@ mariadb:
     user: vagrant
     password: ''
 
-redis:
-    install: '1'
-    port: '6379'
+#redis:
+#    install: '1'
+#    port: '6379'
 
-solr:
-    install: '1'
-    port: '8983'
-    version: 5.2.0
-    cloud_mode: '0'
+#solr:
+#    install: '1'
+#    port: '8983'
+#    version: 5.2.0
+#    cloud_mode: '0'
 
-xdebug:
-    install: '1'
+#xdebug:
+#    install: '1'
 
-composer:
-    install: '1'
+#composer:
+#    install: '1'
 

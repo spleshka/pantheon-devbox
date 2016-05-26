@@ -30,11 +30,13 @@ Change the --name param to reflect the name of your project. Other params can be
 
   4. Download & import database
 
-  5. Go to http://192.168.33.99
+    `mysql db < dump.sql`
 
-  6. Configure your `hosts` file to match the project name and the ip
+  5. Configure your `hosts` file to match the project name and the ip
 
-    192.168.33.99 giin.local
+    192.168.33.99 sitename.local
+
+  6. Go to http://192.168.33.99 or http://sitename.local
 
 
 ## Usage
@@ -69,3 +71,16 @@ Or just connect through any available ssh terminal:
   username: `root`
   password: `(empty)`
 
+### How to access web server logs
+
+  Go to http://192.168.33.99/logs
+
+## TODO List
+  1. Xdebug
+  2. Redis
+  3. Solr
+  4. Selenium
+  5. Phantomjs
+  6. XHprof
+  7. Add email stub
+  7. Review performance

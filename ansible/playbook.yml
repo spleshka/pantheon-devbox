@@ -11,6 +11,5 @@
     - mariadb
     #- redis
     #- solr
-
     #- xdebug
     #- composer
