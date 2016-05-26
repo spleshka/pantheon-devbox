@@ -10,9 +10,9 @@ Runs nginx, php-fpm and mysql (mariadb).
 
 ## Installation
 
-### 1. Install Vagrant, VirtualBox and Ansible.
+  1. Install Vagrant, VirtualBox and Ansible.
 
-### 2. Update Vagrant config file
+  2. Update Vagrant config file
 
 Go to ./Vagrantfile in the root and change the following settings:
 
@@ -26,13 +26,13 @@ Go to ./Vagrantfile in the root and change the following settings:
 
 Change the --name param to reflect the name of your project. Other params can be left unchanged.
 
-### 3. Run `vagrant up`
+  3. Run `vagrant up`
 
-### 4. Download & import database
+  4. Download & import database
 
-### 5. Go to http://192.168.33.99
+  5. Go to http://192.168.33.99
 
-### 6. Configure your `hosts` file to match the project name and the ip
+  6. Configure your `hosts` file to match the project name and the ip
 
     192.168.33.99 giin.local
 
@@ -62,10 +62,10 @@ Or just connect through any available ssh terminal:
 **Database name:** `db`
 
 **MySQL DB User:**
-username: `vagrant`
-password: `(empty)`
+  username: `vagrant`
+  password: `(empty)`
 
 **MySQL ROOT user:**
-username: `root`
-password: `(empty)`
+  username: `root`
+  password: `(empty)`
 
