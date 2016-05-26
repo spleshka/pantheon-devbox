@@ -85,3 +85,4 @@ Or just connect through any available ssh terminal:
   6. XHprof
   7. Add email stub
   8. Review performance
+  9. PhpMyAdmin
