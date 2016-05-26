@@ -1,0 +1,48 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, imagemagick, sendmail, drush, unzip, zip, g++, libssl-dev, apache2-utils]
+    timezone: UTC
+    locale: en_US.UTF-8
+
+    # Password is "systemseed". Created with:
+    # python -c 'import crypt; print crypt.crypt("systemseed", "$1$SomeSalt$")'
+    root_pwd: $1$SomeSalt$pgDrByEHGwHODJdl6GXBB.
+
+vagrant_local:
+    install: '1'
+    vm: { hostname: default }
+
+nginx:
+    install: '1'
+    servername: default
+    docroot: /var/www/html
+
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-imagick, php5-curl, php5-gd, php5-xdebug, php5-mysql]
+
+mariadb:
+    install: '1'
+    root_password: ''
+    database: db
+    user: vagrant
+    password: ''
+
+redis:
+    install: '1'
+    port: '6379'
+
+solr:
+    install: '1'
+    port: '8983'
+    version: 5.2.0
+    cloud_mode: '0'
+
+xdebug:
+    install: '1'
+
+composer:
+    install: '1'
+
