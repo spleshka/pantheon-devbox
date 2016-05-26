@@ -76,6 +76,7 @@ Or just connect through any available ssh terminal:
   Go to http://192.168.33.99/logs
 
 ## TODO List
+  0. Terminus
   1. Xdebug
   2. Redis
   3. Solr
@@ -83,4 +84,4 @@ Or just connect through any available ssh terminal:
   5. Phantomjs
   6. XHprof
   7. Add email stub
-  7. Review performance
+  8. Review performance
