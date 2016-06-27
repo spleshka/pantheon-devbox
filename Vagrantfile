@@ -21,10 +21,10 @@ end
 Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
-        v.name = "default"
+        v.name = "Concern"
         v.customize [
             "modifyvm", :id,
-            "--name", "GIIN environment",
+            "--name", "Concern",
             "--memory", 2048,
             "--natdnshostresolver1", "on",
             "--cpus", 6,

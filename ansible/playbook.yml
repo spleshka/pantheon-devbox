@@ -9,7 +9,9 @@
     - nginx
     - php
     - mariadb
+    - composer
+    - terminus
+    - xdebug
+
     #- redis
     #- solr
-    #- xdebug
-    #- composer

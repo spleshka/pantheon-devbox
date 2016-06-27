@@ -14,17 +14,17 @@ Runs nginx, php-fpm and mysql (mariadb).
 
   2. Update Vagrant config file
 
-Go to ./Vagrantfile in the root and change the following settings:
+  Go to ./Vagrantfile in the root and change the following settings:
 
-    v.customize [
-        "modifyvm", :id,
-        "--name", "default",
-        "--memory", 2048,
-        "--natdnshostresolver1", "on",
-        "--cpus", 4,
-    ]
+      v.customize [
+          "modifyvm", :id,
+          "--name", "default",
+          "--memory", 2048,
+          "--natdnshostresolver1", "on",
+          "--cpus", 4,
+      ]
 
-Change the --name param to reflect the name of your project. Other params can be left unchanged.
+  Change the --name param to reflect the name of your project. Other params can be left unchanged.
 
   3. Run `vagrant up`
 
@@ -76,7 +76,7 @@ Or just connect through any available ssh terminal:
   Go to http://192.168.33.99/logs
 
 ## TODO List
-  0. Terminus
+
   1. Xdebug
   2. Redis
   3. Solr

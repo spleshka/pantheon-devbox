@@ -1,0 +1,11 @@
+#!/bin/bash
+FILE=/etc/php5/mods-available/xdebug.ini
+
+if [ -f $FILE ];
+then
+   sudo mv $FILE > $FILE
+   sudo service php5-fpm restart
+   echo "Xdebug has been disabled."
+else
+   echo "Xdebug was already disabled."
+fi

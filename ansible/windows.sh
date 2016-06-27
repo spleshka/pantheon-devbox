@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Update Repositories
-# sudo apt-get update
+sudo apt-get update
 
 # Determine Ubuntu Version
 . /etc/lsb-release

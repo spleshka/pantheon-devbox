@@ -30,6 +30,11 @@ server {
         expires 24h;
     }
 
+    location ~* ^.+\.(js|css)$ {
+        expires -1;
+        sendfile off;
+    }
+
     location / {
         try_files $uri $uri/ /index.php?q=$uri&$args;
         expires max;
