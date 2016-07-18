@@ -12,3 +12,6 @@ Vagrantfile
 
 # Ignore local inventory file with network config.
 ansible/inventories/dev
+
+# Ignore ansible playbook retry file.
+ansible/playbook.retry
