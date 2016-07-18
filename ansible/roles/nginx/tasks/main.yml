@@ -10,9 +10,10 @@
 - name: Change default nginx site
   sudo: yes
   template: src=default.tpl dest=/etc/nginx/sites-available/default
-  notify: restart nginx
 
 - name: Change the main nginx config
   sudo: yes
   template: src=nginx.conf.tpl dest=/etc/nginx/nginx.conf
-  notify: restart nginx
+
+- name: Restart nginx
+  service: name=nginx state=restarted

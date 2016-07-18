@@ -1,5 +1,5 @@
 ---
-- name: Add ppa Repository
+- name: Add ppa Repository for PHP
   sudo: yes
   apt_repository: repo=ppa:ondrej/{{ php.ppa }}
 
@@ -18,8 +18,23 @@
 - name: Install PHP Packages
   sudo: yes
   apt: pkg={{ item }} state=latest
-  with_items: php.packages
+  with_items: "{{ php.packages }}"
   when: php.packages is defined
 
-- include: configure.yml
-- include: pecl.yml
+- stat: path=/etc/php5/fpm/php.ini
+  register: phpfpm
+
+- stat: path=/etc/php5/cli/php.ini
+  register: phpcli
+
+- include: php-fpm.yml
+  when: phpfpm.stat.exists
+
+- include: php-cli.yml
+  when: phpcli.stat.exists
+
+# Exclude pecl installation - nothing yet to install.
+#- include: pecl.yml
+
+- name: Restart php5-fpm
+  service: name=php5-fpm enabled=yes state=restarted

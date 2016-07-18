@@ -1,4 +1,4 @@
-- name: Install
+- name: Install PECL Packages
   apt: pkg="php5-dev" state=present
   when: php.pecl_packages is defined
 

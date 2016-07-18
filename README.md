@@ -35,11 +35,11 @@ Runs nginx, php-fpm and mysql (mariadb).
   
   4. If necessary, change port in the following line of `Vagrantfile`:
 
-     `config.vm.network :private_network, ip: "192.168.33.98"`
+     `config.vm.network :private_network, ip: "192.168.33.99"`
   
   5. Copy `ansible/inventories/dev.default` file to `ansible/inventories/dev`.
 
-     If changed port in the step above, change it here as well.
+     If you've changed port in the step above, change it here as well.
 
   6. Run `vagrant up`
 
