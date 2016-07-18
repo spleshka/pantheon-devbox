@@ -10,15 +10,15 @@ Runs nginx, php-fpm and mysql (mariadb).
 
 ## Installation
 
-  1. Install Vagrant, VirtualBox and Ansible.
+  1. Install `Vagrant`, `VirtualBox` and `Ansible`
   
-  2. Rename "Vagrantfile.default" file to "Vagrantfile" 
+  2. Rename `Vagrantfile.default` file to `Vagrantfile` 
 
-  3. Update Vagrantfile configs
+  3. Update `Vagrantfile` configs
 
   Go to ./Vagrantfile in the root and change the following settings:
 
-    config.vm.provider :virtualbox do |v|
+      config.vm.provider :virtualbox do |v|
         v.name = "GIVE A NAME TO  YOUR MACHINE"
         v.customize [
             "modifyvm", :id,
@@ -27,10 +27,10 @@ Runs nginx, php-fpm and mysql (mariadb).
             "--natdnshostresolver1", "on",
             "--cpus", 4,
         ]
-    end
+      end
 
-  Replace "GIVE A NAME TO  YOUR MACHINE" with a name of your project.
-  Other configs (like memory or cpus) can be left as is or updated
+  Replace `GIVE A NAME TO  YOUR MACHINE` with a name of your project.
+  Other configs (like `--memory` or `--cpus`) can be left as is or updated
   if needed.
 
   4. Run `vagrant up`
