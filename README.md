@@ -44,7 +44,7 @@ Runs nginx, php-fpm and mysql (mariadb).
 ### OS root user
 
 username: `root`
-password: `systemseed`
+password: `vagrant`
 
 ### SSH
 

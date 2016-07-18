@@ -21,10 +21,10 @@ end
 Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
-        v.name = "Concern"
+        v.name = "D8"
         v.customize [
             "modifyvm", :id,
-            "--name", "Concern",
+            "--name", "D8",
             "--memory", 2048,
             "--natdnshostresolver1", "on",
             "--cpus", 6,
