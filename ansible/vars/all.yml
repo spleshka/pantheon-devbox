@@ -18,6 +18,9 @@ nginx:
 php:
     ppa: php5-5.6
     packages: [php5-cli, php5-intl, php5-mcrypt, php5-imagick, php5-curl, php5-gd, php5-mysql]
+    memory_limit: 1024M
+    timeout: 300
+
 
 mariadb:
     root_password: ''

@@ -16,11 +16,11 @@ http {
   sendfile on;
   tcp_nopush on;
   tcp_nodelay on;
-
-  keepalive_timeout 180;
   types_hash_max_size 2048;
   # server_tokens off;
-  fastcgi_read_timeout 300;
+
+  keepalive_timeout {{ php.timeout }};
+  fastcgi_read_timeout {{ php.timeout }};
 
   # server_names_hash_bucket_size 64;
   # server_name_in_redirect off;
