@@ -11,32 +11,39 @@ Runs nginx, php-fpm and mysql (mariadb).
 ## Installation
 
   1. Install Vagrant, VirtualBox and Ansible.
+  
+  2. Rename "Vagrantfile.default" file to "Vagrantfile" 
 
-  2. Update Vagrant config file
+  3. Update Vagrantfile configs
 
   Go to ./Vagrantfile in the root and change the following settings:
 
-      v.customize [
-          "modifyvm", :id,
-          "--name", "default",
-          "--memory", 2048,
-          "--natdnshostresolver1", "on",
-          "--cpus", 4,
-      ]
+    config.vm.provider :virtualbox do |v|
+        v.name = "GIVE A NAME TO  YOUR MACHINE"
+        v.customize [
+            "modifyvm", :id,
+            "--name", "GIVE A NAME TO  YOUR MACHINE",
+            "--memory", 2048,
+            "--natdnshostresolver1", "on",
+            "--cpus", 4,
+        ]
+    end
 
-  Change the --name param to reflect the name of your project. Other params can be left unchanged.
+  Replace "GIVE A NAME TO  YOUR MACHINE" with a name of your project.
+  Other configs (like memory or cpus) can be left as is or updated
+  if needed.
 
-  3. Run `vagrant up`
+  4. Run `vagrant up`
 
-  4. Download & import database
+  5. Download & import database
 
     `mysql db < dump.sql`
 
-  5. Configure your `hosts` file to match the project name and the ip
+  6. Configure your `hosts` file to match the project name and the ip
 
     192.168.33.99 sitename.local
 
-  6. Go to http://192.168.33.99 or http://sitename.local
+  7. Go to http://192.168.33.99 or http://sitename.local
 
 
 ## Usage

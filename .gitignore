@@ -6,3 +6,6 @@ www
 
 # Ignore vagrant cache / local files.
 .vagrant
+
+# Ignore local Vagrantfile.
+Vagrantfile
