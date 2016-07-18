@@ -8,10 +8,11 @@
     - vagrant_local
     - nginx
     - php
+    - xdebug
     - mariadb
     - composer
     - terminus
-    - xdebug
+    - drush
 
     #- redis
     #- solr

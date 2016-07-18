@@ -1,0 +1,7 @@
+- name: Download Drush
+  shell: php -r "readfile('http://files.drush.org/drush.phar');" > drush
+  args:
+    chdir: /usr/local/bin
+
+- name: Make Drush executable
+  file: path=/usr/local/bin/drush mode=0777

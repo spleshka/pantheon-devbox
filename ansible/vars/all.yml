@@ -1,6 +1,6 @@
 ---
 server:
-    packages: [vim, git, imagemagick, sendmail, drush, unzip, zip, g++, libssl-dev, apache2-utils]
+    packages: [vim, git, imagemagick, sendmail, unzip, zip, g++, libssl-dev, apache2-utils]
     timezone: UTC
     locale: en_US.UTF-8
 
@@ -33,7 +33,7 @@ terminus:
 
 xdebug:
 
-
+drush:
 
 #redis:
 #    install: '1'
