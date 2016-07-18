@@ -9,3 +9,6 @@ www
 
 # Ignore local Vagrantfile.
 Vagrantfile
+
+# Ignore local inventory file with network config.
+ansible/inventories/dev

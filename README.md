@@ -32,18 +32,24 @@ Runs nginx, php-fpm and mysql (mariadb).
   Replace `GIVE A NAME TO  YOUR MACHINE` with a name of your project.
   Other configs (like `--memory` or `--cpus`) can be left as is or updated
   if needed.
+  
+  4. If necessary, change port in the following line of `Vagrantfile`:
+     `config.vm.network :private_network, ip: "192.168.33.98"`
+  
+  5. Copy `ansible/inventories/dev.default` file to `ansible/inventories/dev`.
+     If changed port in the step above, change it here as well.
 
-  4. Run `vagrant up`
+  6. Run `vagrant up`
 
-  5. Download & import database
+  7. Download & import database
 
     `mysql db < dump.sql`
 
-  6. Configure your `hosts` file to match the project name and the ip
+  8. Configure your `hosts` file to match the project name and the ip
 
     `192.168.33.99 sitename.local`
 
-  7. Go to http://192.168.33.99 or http://sitename.local
+  9. Go to http://192.168.33.99 or http://sitename.local
 
 
 ## Usage
