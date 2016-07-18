@@ -1,17 +1,14 @@
-- name: Download the Pantheon terminus
-  get_url: url=https://github.com/pantheon-systems/cli/archive/{{ terminus.version }}.zip dest=/var/terminus.zip
+- name: Create a new folder for Terminus
+  file: path=/var/terminus state=directory mode=0775
 
-- name: Unarchive Pantheon terminus package
-  unarchive: src=/var/terminus.zip dest=/var
-
-- name: Install Pantheon terminus
+- name: Install Pantheon Terminus
   composer:
-    command: 'install'
-    working_dir: /var/terminus-{{ terminus.version }}
-    prefer_dist: 'yes'
+    command: "require"
+    arguments: "pantheon-systems/terminus:{{ terminus.version }}"
+    working_dir: "/var/terminus"
 
-- name: Make Pantheon CLI accessible from command line
+- name: Make Pantheon Terminus accessible from command line
   file:
-    src: /var/terminus-{{ terminus.version }}/bin/terminus
+    src: /var/terminus/vendor/bin/terminus
     dest: /usr/local/bin/terminus
     state: link

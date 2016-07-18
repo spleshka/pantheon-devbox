@@ -14,14 +14,14 @@
 - name: Install Extra Packages
   sudo: yes
   apt: pkg={{ item }} state=latest
-  with_items: server.packages
+  with_items: "{{ server.packages }}"
   when: server.packages is defined
 
 - name: Configure the timezone
   sudo: yes
   template: src=timezone.tpl dest=/etc/timezone
 
-- name: More Configure the timezone
+- name: More timezone configurations
   sudo: yes
   file: src=/usr/share/zoneinfo/{{server.timezone}} dest=/etc/localtime state=link force=yes backup=yes
 

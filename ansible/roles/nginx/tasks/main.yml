@@ -15,5 +15,8 @@
   sudo: yes
   template: src=nginx.conf.tpl dest=/etc/nginx/nginx.conf
 
+- name: Delete default index.html file
+  file: path=/var/www/html/index.html state=absent
+
 - name: Restart nginx
   service: name=nginx state=restarted
