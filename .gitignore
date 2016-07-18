@@ -3,3 +3,6 @@ www
 
 # Ignore phpstorm files.
 .idea
+
+# Ignore vagrant cache / local files.
+.vagrant
