@@ -41,7 +41,7 @@ Runs nginx, php-fpm and mysql (mariadb).
 
   6. Configure your `hosts` file to match the project name and the ip
 
-    192.168.33.99 sitename.local
+      192.168.33.99 sitename.local
 
   7. Go to http://192.168.33.99 or http://sitename.local
 
