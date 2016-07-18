@@ -1,2 +1,5 @@
 # Ignore files within the working folder.
 www
+
+# Ignore phpstorm files.
+.idea
